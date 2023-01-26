@@ -78,7 +78,7 @@ def checkGuess(guess, word):
 print("One player or two? (enter '1' or '2')")
 players = input()
 
-if int(players) == 1:
+if int(players) != 1:
     print("Player 1! Enter your word. (No peaking, player 2!)\n")
     word = input()
 else:

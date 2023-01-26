@@ -56,10 +56,6 @@ def drawScreen(
     
     print("\n")
 
-name = "Mendel"
-
-len(name)
-
 """# The checkGuess function checks to see if the letter Player 2 guessed is in the word
 
 If it is, it returns True, if not, it returns False

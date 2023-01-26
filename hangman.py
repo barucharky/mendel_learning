@@ -11,6 +11,21 @@ Original file is located at
 
 import os
 
+"""# Quick clear function
+
+Find out how the underscore works here
+"""
+
+def clear():
+ 
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+ 
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
+
 """# The drawScreen function draws the hangman and the blank spaces"""
 
 def drawScreen(
@@ -31,7 +46,7 @@ def drawScreen(
                "----|\n|   |\n|   O\n|  /|\\\n|   |\n|  / \\"
               ]
 
-    os.system("clear")
+    clear()
 
     print(gallows[guesses])
     print("\n")
@@ -58,7 +73,7 @@ def checkGuess(guess, word):
 print("Player 1! Enter your word. (No peaking, player 2!)\n")
 word = input()
 
-os.system("clear")
+clear()
 
 answer = []
 

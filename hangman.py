@@ -10,6 +10,7 @@ Original file is located at
 """
 
 import os
+import requests
 
 """# Quick clear function
 
@@ -69,12 +70,21 @@ def checkGuess(guess, word):
         if guess == word[letter]:
             answer[letter] = guess
             rightwrong = True
+            
     return rightwrong
 
-"""# Gets the word from Player 1"""
+"""# Gets the word from Player 1 or api"""
 
-print("Player 1! Enter your word. (No peaking, player 2!)\n")
-word = input()
+print("One player or two? (enter '1' or '2')")
+players = input()
+
+if int(players) == 1:
+    print("Player 1! Enter your word. (No peaking, player 2!)\n")
+    word = input()
+else:
+    URL = "https://random-word-api.herokuapp.com/word"
+    response = requests.get(url = URL)
+    word = response.text[2:len(response.text)-2]
 
 clear()
 

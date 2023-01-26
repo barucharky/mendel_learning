@@ -56,17 +56,24 @@ def drawScreen(
     
     print("\n")
 
+name = "Mendel"
+
+len(name)
+
 """# The checkGuess function checks to see if the letter Player 2 guessed is in the word
 
 If it is, it returns True, if not, it returns False
 """
 
 def checkGuess(guess, word):
+
+    rightwrong = False
+
     for letter in range(len(word)):
         if guess == word[letter]:
             answer[letter] = guess
-            return True
-    return False
+            rightwrong = True
+    return rightwrong
 
 """# Gets the word from Player 1"""
 
